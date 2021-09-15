@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ThankYouPage extends BasePage {
 
-    private static final By THANK_YOU_PAGE_TITLE = By.cssSelector("[class=title]");
+    private static final By THANK_YOU_PAGE_TITLE = By.cssSelector(".title");
     private static final By BACK_HOME_BUTTON = By.id("back-to-products");
 
     public ThankYouPage(WebDriver driver) {
