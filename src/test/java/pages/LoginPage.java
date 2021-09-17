@@ -22,4 +22,8 @@ public class LoginPage extends BasePage {
         driver.findElement(PASSWORD).sendKeys(password);
         driver.findElement(LOGIN_BUTTON).click();
     }
+
+    public String getLoginBtnName() {
+        return driver.findElement(LOGIN_BUTTON).getAttribute("value");
+    }
 }

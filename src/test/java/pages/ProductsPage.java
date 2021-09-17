@@ -15,6 +15,8 @@ public class ProductsPage extends BasePage {
     private static final By PRODUCT_PRICES_BEFORE = By.cssSelector(".inventory_item_price");
     private static final By DROPDOWN_MENU = By.cssSelector(".product_sort_container");
     private static final By ALL_PRODUCTS_FROM_PAGE = By.xpath("//div[@class='inventory_item_name']");
+    private static final By BURGER_MENU_BUTTON = By.id("react-burger-menu-btn");
+    private static final By LOGOUT_BUTTON = By.id("logout_sidebar_link");
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -53,5 +55,10 @@ public class ProductsPage extends BasePage {
     public void openPageOfFirstProduct() {
         List<WebElement> allProductsFromPage = driver.findElements(ALL_PRODUCTS_FROM_PAGE);
         allProductsFromPage.get(0).click();
+    }
+
+    public void logOut() {
+        driver.findElement(BURGER_MENU_BUTTON).click();
+        driver.findElement(LOGOUT_BUTTON).click();
     }
 }
