@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class LoginPage extends BasePage {
 
@@ -25,5 +26,9 @@ public class LoginPage extends BasePage {
 
     public String getLoginBtnName() {
         return driver.findElement(LOGIN_BUTTON).getAttribute("value");
+    }
+
+    public void verifyLoginPageIsOpened() {
+        Assert.assertTrue(super.isVisible(LOGIN_BUTTON));
     }
 }

@@ -33,4 +33,8 @@ public class CartPage extends BasePage {
     public int getNumberOfProductsInCart() {
         return driver.findElements(ALL_PRODUCTS_IN_CART).size();
     }
+
+    public void verifyCartPageIsOpened() {
+        super.isVisible(CART_PAGE_TITLE);
+    }
 }

@@ -19,4 +19,8 @@ public class OverviewPage extends BasePage {
     public void clickOnFinishBtn() {
         driver.findElement(FINISH_BUTTON).click();
     }
+
+    public void verifyOverviewPageIsOpened() {
+        super.isVisible(OVERVIEW_PAGE_TITLE);
+    }
 }

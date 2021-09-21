@@ -8,14 +8,16 @@ public class AbilityToOpenProductPageTest extends BaseTest {
     @Test
     public void abilityToOpenProductPageTest() {
         //loginPage
-        driver.get("https://www.saucedemo.com/");
         loginPage.open();
+        loginPage.verifyLoginPageIsOpened();
         loginPage.login("standard_user", "secret_sauce");
         //productsPage
+        productsPage.verifyProductsPageIsOpened();
         Assert.assertEquals(productsPage.getHeader(), "PRODUCTS");
         String firstProductNameOnMainPage = productsPage.getTitleOfFirstProduct();
         productsPage.openPageOfFirstProduct();
         //pageOfProduct
+        pageOfProduct.verifyPageOfProductIsOpened();
         String productNameOnProductPage = pageOfProduct.getTitleOfProduct();
         Assert.assertEquals(firstProductNameOnMainPage, productNameOnProductPage);
     }
