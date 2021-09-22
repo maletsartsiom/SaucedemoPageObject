@@ -61,4 +61,8 @@ public class ProductsPage extends BasePage {
         driver.findElement(BURGER_MENU_BUTTON).click();
         driver.findElement(LOGOUT_BUTTON).click();
     }
+
+    public void verifyProductsPageIsOpened() {
+        super.isVisible(PRODUCTS_PAGE_TITLE);
+    }
 }

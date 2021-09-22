@@ -29,4 +29,8 @@ public class PageOfProduct extends BasePage {
     public void clickOnCartBtnIcon() {
         driver.findElement(CART_BUTTON_ICON).click();
     }
+
+    public void verifyPageOfProductIsOpened() {
+        super.isVisible(TITLE_OF_PRODUCT);
+    }
 }

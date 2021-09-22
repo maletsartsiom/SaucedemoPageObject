@@ -25,4 +25,8 @@ public class CheckoutPage extends BasePage {
         driver.findElement(ZIP_CODE).sendKeys(zipCode);
         driver.findElement(CONTINUE_BUTTON).click();
     }
+
+    public void verifyCheckoutPageIsOpened() {
+        super.isVisible(CHECKOUT_PAGE_TITLE);
+    }
 }

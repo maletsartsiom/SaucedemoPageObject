@@ -19,4 +19,8 @@ public class ThankYouPage extends BasePage {
     public void clickOnBackHomeBtn() {
         driver.findElement(BACK_HOME_BUTTON).click();
     }
+
+    public void verifyOverviewPageIsOpened() {
+        super.isVisible(THANK_YOU_PAGE_TITLE);
+    }
 }
