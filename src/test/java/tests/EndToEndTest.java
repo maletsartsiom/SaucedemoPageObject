@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class EndToEndTest extends BaseTest {
 
-    @Test (description = "End to end test", retryAnalyzer = RetryAnalyzer.class)
+    @Test (description = "End to end test")
     public void endToEnd() {
         //loginPage
         loginPage.open();
