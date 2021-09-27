@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AbilityToSortProductsByPriceLowToHighTest extends BaseTest {
 
-    @Test
+    @Test (description = "Ability to sort products by price low to high", retryAnalyzer = RetryAnalyzer.class)
     public void AbilityToSortProductsByPriceLowToHigh() {
         //loginPage
         loginPage.open();

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class AbilityToAddRemoveProductFromProductPage extends BaseTest {
 
-    @Test
+    @Test (description = "Ability to add and remove product from product page", retryAnalyzer = RetryAnalyzer.class)
     public void abilityToAddRemoveProductFromProductPage() {
         //loginPage
         loginPage.open();
