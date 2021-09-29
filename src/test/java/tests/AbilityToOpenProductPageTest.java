@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class AbilityToOpenProductPageTest extends BaseTest {
 
-    @Test
+    @Test (description = "Ability to open product page test")
     public void abilityToOpenProductPageTest() {
         //loginPage
         loginPage.open();

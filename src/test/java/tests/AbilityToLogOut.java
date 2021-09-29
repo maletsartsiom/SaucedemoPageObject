@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class AbilityToLogOut extends BaseTest {
 
-    @Test
+    @Test (description = "Ability to logout")
     public void abilityToLogOut() {
         //loginPage
         loginPage.open();

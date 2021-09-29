@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="tests.AnnotationTransformer"></listener>
+    </listeners>
+    <test name="EndToEnd Tests"><!-- Test -->
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.EndToEndTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="LogIn Page Test"><!-- Test -->
+        <parameter name="browser" value="opera"></parameter>
+        <classes>
+            <class name="tests.AbilityToLogOut"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="MainPage Tests"><!-- Test -->
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.AbilityToSortProductsByPriceLowToHighTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="ProductPage Tests"><!-- Test -->
+        <parameter name="browser" value="opera"></parameter>
+        <classes>
+            <class name="tests.AbilityToOpenProductPageTest"/>
+            <class name="tests.AbilityToAddRemoveProductFromProductPage"/>
+        </classes>
+    </test> <!-- Test -->
+</suite>
