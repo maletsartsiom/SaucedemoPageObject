@@ -5,6 +5,10 @@ import org.testng.annotations.Test;
 
 public class AbilityToAddRemoveProductFromProductPage extends BaseTest {
 
+    //@TmsLink("TMS-1")
+    //@Issue("TMS-2")
+    //@Link("https://")
+    //@Description ("Some description or steps")
     @Test (description = "Ability to add and remove product from product page")
     public void abilityToAddRemoveProductFromProductPage() {
         //loginPage
